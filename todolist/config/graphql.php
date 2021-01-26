@@ -102,7 +102,7 @@ return [
         'default' => [
             'query' => [
                 'todo' => App\GraphQL\Queries\TodoQuery::class,
-                'todos' => App\GraphQL\Queries\AllTodoQuery::class,
+                'todos' => App\GraphQL\Queries\TodosQuery::class,
             ],
             'mutation' => [
                 // Create a book
@@ -128,9 +128,6 @@ return [
     //
     'types' => [
         'Todo' => App\GraphQL\Types\TodoType::class,
-        // 'example'           => ExampleType::class,
-        // 'relation_example'  => ExampleRelationType::class,
-        // \Rebing\GraphQL\Support\UploadType::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

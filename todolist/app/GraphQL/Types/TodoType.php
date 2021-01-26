@@ -9,13 +9,10 @@ use Rebing\GraphQL\Support\Type as GraphQLType;
 class TodoType extends GraphQLType
 {
     protected $attributes = [
-        'title' => 'Tâche',
-        'date_execution' => 'La date d\'execution de la tâche',
-        'priority' => 'Priorité d\'une tâche',
+        'name' => 'Todo',
         'description' => 'Collection of books and details of Author',
         'model' => Todo::class
     ];
-
 
     public function fields(): array
     {

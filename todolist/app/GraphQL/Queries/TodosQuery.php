@@ -1,13 +1,13 @@
 <?php
 
-namespace App\graphql\Queries;
+namespace App\Graphql\Queries;
 
 use App\Models\Todo;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
 
-class AllTodoQuery extends Query
+class TodosQuery extends Query
 {
     protected $attributes = [
         'name' => 'todos',
@@ -20,6 +20,10 @@ class AllTodoQuery extends Query
 
     public function resolve($root, $args)
     {
+        if (isset($args['id'])) {
+            return Todo::find($args['id']);
+        }
+
         return Todo::all();
     }
 }
