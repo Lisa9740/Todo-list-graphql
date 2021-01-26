@@ -101,9 +101,15 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // 'example_query' => ExampleQuery::class,
+                'todo' => App\GraphQL\Queries\TodoQuery::class,
+                'todos' => App\GraphQL\Queries\AllTodoQuery::class,
             ],
             'mutation' => [
+                // Create a book
+                'createTodo' => App\GraphQL\Mutations\CreateTodoMutation::class,
+                // update book
+                'updateTodo' => App\GraphQL\Mutations\UpdateTodoMutation::class,
+                // delete a book
                 // 'example_mutation'  => ExampleMutation::class,
             ],
             'middleware' => [],
@@ -121,6 +127,7 @@ return [
     // ]
     //
     'types' => [
+        'Todo' => App\GraphQL\Types\TodoType::class,
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
