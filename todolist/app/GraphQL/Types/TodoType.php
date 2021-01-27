@@ -30,11 +30,14 @@ class TodoType extends GraphQLType
                 'description' => 'The international standard book number for the book',
             ],
             'priority' => [
-                'type' => Type::nonNull(Type::boolean()),
+                'type' => Type::nonNull(Type::string()),
                 'description' => 'The international standard book number for the book',
             ],
             'description' => [
                 'type' => Type::nonNull(Type::string()),
+                'description' => 'The international standard book number for the book',
+            ], 'is_executed' => [
+                'type' => Type::nonNull(Type::boolean()),
                 'description' => 'The international standard book number for the book',
             ],
         ];

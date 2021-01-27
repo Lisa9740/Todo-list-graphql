@@ -25,18 +25,23 @@ class CreateTodoMutation extends Mutation
                 'name' => 'title',
                 'type' =>  Type::nonNull(Type::string()),
             ],
-            'execution_date' => [
-                'name' => 'execution_date',
+            'date_execution' => [
+                'name' => 'date_execution',
                 'type' =>  Type::nonNull(Type::string()),
             ],
             'priority' => [
                 'name' => 'priority',
                 'type' =>  Type::nonNull(Type::string()),
             ],
-            'is_execute' => [
-                'name' => 'is_execute',
+            'description' => [
+                'name' => 'description',
+                'type' =>  Type::nonNull(Type::string()),
+            ],
+            'is_executed' => [
+                'name' => 'is_executed',
                 'type' =>  Type::nonNull(Type::boolean()),
-            ]
+            ],
+
 
         ];
     }
